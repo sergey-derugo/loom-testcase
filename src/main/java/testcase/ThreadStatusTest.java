@@ -23,7 +23,7 @@ public class ThreadStatusTest {
         try (ExecutorService pool = Executors.newVirtualThreadPerTaskExecutor()) {
 
             List<Future<?>> futures = new ArrayList<>();
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 futures.add(pool.submit(new CpuTask()));
             }
 
